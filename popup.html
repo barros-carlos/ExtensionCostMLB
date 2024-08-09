@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste</title>
+    <title>Gerador de Valores</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="popup.js"></script>
 </head>
 <body>
-    teste
+    <h2>Gerador de preços</h2>
+    <form id="formulario" onsubmit="processarValores(event)">
+        <p>Please select your favorite Web language:</p>
+          <input type="radio" id="Ecomparts" name="empresa" value="Ecomparts">
+          <label for="Ecomparts">EcomParts</label><br>
+          <input type="radio" id="VRSG" name="empresa" value="VRSG">
+          <label for="VRSG">VRSG</label><br>
+          <input type="radio" id="WRS" name="empresa" value="WRS">
+          <label for="WRS">WRS</label>
+
+        <label for="COdigoMLB">Código MLB:</label>
+        <input type="text" id="COdigoMLB" name="COdigoMLB" required placeholder="Exemplo: 12345">
+ 
+        <label for="ValorDesconto">Desconto</label>
+        <input type="number" id="ValorDesconto" name="ValorDesconto" required placeholder="Exemplo: 50" min="0" max="100" step="0.01"> %
+
+        <label for="ParticipacaoMLB">Valor em Reais:</label>
+        <input type="number" id="ParticipacaoMLB" name="ParticipacaoMLB" required placeholder="Exemplo: 100,00" step="0.01">
+
+        <button type="submit">Enviar</button>
+    </form>
 </body>
 </html>
