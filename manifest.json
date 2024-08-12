@@ -22,7 +22,7 @@
     "options_page": "./options.html",
     "permissions": [
         "activeTab",
-        "tabs",
+        "tabs", 
         "storage",
         "scripting"
     ],
